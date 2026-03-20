@@ -14,7 +14,8 @@ pipeline {
 
         stage('Checkout Code') {
             steps {
-                 checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/myself-8816/k8s_munni.git']])
+                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/myself-8816/k8s_munni.git']])
+            }
         }
 
         stage('Build WAR File') {
@@ -49,5 +50,4 @@ pipeline {
     }
 
 
-}
 }
